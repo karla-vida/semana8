@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './Card.module.css';
 
 export const Card = ({ produto, onSelecionar, selecionado }) => (
-  <div className={selecionado ? styles.cardSelecionado:styles.card} >
+  <div className={selecionado ? styles.cardSelecionado:styles.card} onClick={onSelecionar}>
     <img className={styles.img} alt='Foto do prato' src={produto.img} height={200} />
 
     <div className={styles.info}>
