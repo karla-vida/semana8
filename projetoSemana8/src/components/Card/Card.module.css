@@ -7,6 +7,15 @@
   width: 100%;
 }
 
+.cardSelecionado{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(14, 78, 14);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  width: 100%;
+}
+
 .img {
   border-radius: 20px 20px 0 0;
   width: 100%;

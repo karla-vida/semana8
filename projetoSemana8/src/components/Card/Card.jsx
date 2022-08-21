@@ -29,5 +29,7 @@ Card.propTypes = {
     descricao: PropTypes.string.isRequired,
     valor: PropTypes.number.isRequired,
     tempoPreparo: PropTypes.string.isRequired,
+    onSelecionar: PropTypes.func.isRequired,
+    selecionado: PropTypes.bool.isRequired,
   }),
 };
