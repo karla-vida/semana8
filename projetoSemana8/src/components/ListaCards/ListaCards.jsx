@@ -8,9 +8,16 @@ import styles from './ListaCards.module.css';
 
 export const ListaCards = ({ produtos }) => {
  const [idSelecionado, setSelecionado] = useState([]);
+ 
  function handleSelecionar(id){
-
+  if(idSelecionado.includes(id)){
+  let arrayFiltrado = idSelecionado.filter((n)=> n!== id);
+  setSelecionado (arrayFiltrado);
+}
+else
+setSelecionado([...idSelecionado, id]);
  }
+ 
 return(
   <ul className={styles.lista}>
     {produtos.map((produto) => (
