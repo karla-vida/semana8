@@ -1,4 +1,4 @@
-import { Footer, Header, Secao } from "@components";
+import { Footer, Header, Secao, FiltroSecao } from "@components";
 import produtos from "@services/produtos.json";
 import { array } from "prop-types";
 import styles from "./App.module.css";
@@ -26,11 +26,21 @@ function App() {
     },
   ];
 
+function handleSelecionarSecao(titulo){
+}
+
   return (
     <div className={styles.app}>
       <Header />
+      <FiltroSecao 
+      arraySecoes={arrayGlobal}
+      onSelecionarSecao={() =>handleSelecionarSecao(titulo)}
+      >
+
+      </FiltroSecao>
       <main className={styles.main}>
         {arrayGlobal.map((secao,index) => (
+          
           <Secao
             nome={secao.nome} key={index}
             produtos={secao.produtos}
@@ -38,6 +48,7 @@ function App() {
           />
         ))}
       </main>
+   
       <Footer />
     </div>
   );
