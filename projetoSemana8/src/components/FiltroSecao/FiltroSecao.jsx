@@ -8,9 +8,12 @@ export const FiltroSecao = ({arraySecoes, onSelecionarSecao}) => (
         <ul className={styles.listaArray}>
           {arraySecoes.map((secao, index) => (
             <li className={styles.listaSecao} key={index}>
-              <button onClick={() =>onSelecionarSecao(secao.titulo)}> 
+                <button onClick={onSelecionarSecao(secao.titulo)}> 
                     {secao.titulo}
-               </button>
+               </button> 
+              {/* <button onClick={() =>onSelecionarSecao(secao.titulo)}> 
+                    {secao.titulo}
+               </button> */}
             </li>
           ))}
         </ul>
